@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "description": "pallas project",
   "author": "zhaoyadong <atding@163.com>",
-  "private": true,
   "main": "dist/static/js/pallas.js",
   "scripts": {
     "dev": "node build/dev-server.js",

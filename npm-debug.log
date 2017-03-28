@@ -1,0 +1,145 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@4.1.2
+3 info using node@v7.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/zhaoyadong/Workspace/pallas',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/zhaoyadong/.npm/pallas/0.0.2/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/zhaoyadong/.npm correctMkdir not in flight; initializing
+10 info lifecycle pallas@0.0.2~prepublish: pallas@0.0.2
+11 silly lifecycle pallas@0.0.2~prepublish: no script for prepublish, continuing
+12 info lifecycle pallas@0.0.2~prepare: pallas@0.0.2
+13 silly lifecycle pallas@0.0.2~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/zhaoyadong/.npm/pallas/0.0.2/package.tgz',
+14 verbose tar pack   '/Users/zhaoyadong/Workspace/pallas' ]
+15 verbose tarball /Users/zhaoyadong/.npm/pallas/0.0.2/package.tgz
+16 verbose folder /Users/zhaoyadong/Workspace/pallas
+17 verbose addLocalTarball adding from inside cache /Users/zhaoyadong/.npm/pallas/0.0.2/package.tgz
+18 verbose correctMkdir /Users/zhaoyadong/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd pallas@0.0.2
+20 verbose afterAdd /Users/zhaoyadong/.npm/pallas/0.0.2/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/zhaoyadong/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/zhaoyadong/.npm/pallas/0.0.2/package/package.json written
+23 silly publish { name: 'pallas',
+23 silly publish   version: '0.0.2',
+23 silly publish   description: 'pallas project',
+23 silly publish   author: { name: 'zhaoyadong', email: 'atding@163.com' },
+23 silly publish   main: 'dist/static/js/pallas.js',
+23 silly publish   scripts:
+23 silly publish    { dev: 'node build/dev-server.js',
+23 silly publish      build: 'node build/build.js' },
+23 silly publish   repository: { type: 'git', url: 'git+https://github.com/packjs/pallas.git' },
+23 silly publish   dependencies: { vue: '^2.1.10', 'vue-router': '^2.2.0' },
+23 silly publish   devDependencies:
+23 silly publish    { autoprefixer: '^6.7.2',
+23 silly publish      'babel-core': '^6.22.1',
+23 silly publish      'babel-loader': '^6.2.10',
+23 silly publish      'babel-plugin-transform-runtime': '^6.22.0',
+23 silly publish      'babel-preset-es2015': '^6.22.0',
+23 silly publish      'babel-preset-stage-2': '^6.22.0',
+23 silly publish      'babel-register': '^6.22.0',
+23 silly publish      chalk: '^1.1.3',
+23 silly publish      'connect-history-api-fallback': '^1.3.0',
+23 silly publish      'css-loader': '^0.26.1',
+23 silly publish      'eventsource-polyfill': '^0.9.6',
+23 silly publish      express: '^4.14.1',
+23 silly publish      'extract-text-webpack-plugin': '^2.0.0-rc.2',
+23 silly publish      'file-loader': '^0.10.0',
+23 silly publish      'friendly-errors-webpack-plugin': '^1.1.3',
+23 silly publish      'function-bind': '^1.1.0',
+23 silly publish      'html-webpack-plugin': '^2.28.0',
+23 silly publish      'http-proxy-middleware': '^0.17.3',
+23 silly publish      'webpack-bundle-analyzer': '^2.2.1',
+23 silly publish      semver: '^5.3.0',
+23 silly publish      opn: '^4.0.2',
+23 silly publish      ora: '^1.1.0',
+23 silly publish      shelljs: '^0.7.6',
+23 silly publish      'url-loader': '^0.5.7',
+23 silly publish      'vue-loader': '^10.3.0',
+23 silly publish      'vue-style-loader': '^2.0.0',
+23 silly publish      'vue-template-compiler': '^2.1.10',
+23 silly publish      webpack: '^2.2.1',
+23 silly publish      'webpack-dev-middleware': '^1.10.0',
+23 silly publish      'webpack-hot-middleware': '^2.16.1',
+23 silly publish      'webpack-merge': '^2.6.1',
+23 silly publish      'vue-datepicker': '^1.3.0' },
+23 silly publish   engines: { node: '>= 4.0.0', npm: '>= 3.0.0' },
+23 silly publish   license: 'MIT',
+23 silly publish   readme: '# babubaba\n\n> babubaba project\n\n## Build Setup\n\n``` bash\n# install dependencies\nnpm install\n\n# serve with hot reload at localhost:8080\nnpm run dev\n\n# build for production with minification\nnpm run build\n\n# build for production and view the bundle analyzer report\nnpm run build --report\n```\n\nFor detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).\n',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   gitHead: '40751775842790b765447ed9cc285737646f44f7',
+23 silly publish   bugs: { url: 'https://github.com/packjs/pallas/issues' },
+23 silly publish   homepage: 'https://github.com/packjs/pallas#readme',
+23 silly publish   _id: 'pallas@0.0.2',
+23 silly publish   _shasum: '6367a40721325e448b0a5418cd52e6e55c44a2c4',
+23 silly publish   _from: '.' }
+24 info lifecycle pallas@0.0.2~prepublishOnly: pallas@0.0.2
+25 silly lifecycle pallas@0.0.2~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name pallas
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'pallas',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'pallas',
+30 silly mapToRegistry   name: 'pallas',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/pallas
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/zhaoyadong/.npm/pallas/0.0.2/package.tgz
+34 verbose request uri https://registry.npmjs.org/pallas
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 4:20:23 PM
+37 verbose request using bearer token for auth
+38 verbose request id 40721dec2a49c73a
+39 http request PUT https://registry.npmjs.org/pallas
+40 http 403 https://registry.npmjs.org/pallas
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '95',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Tue, 28 Mar 2017 08:20:24 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-itm7422-ITM',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1490689224.372821,VS0,VE446',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating /Users/zhaoyadong/.npm/registry.npmjs.org/pallas on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: "You cannot publish over the previously published version 0.0.2." : pallas
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:304:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:292:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:212:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:192:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:189:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 403
+46 verbose pkgid pallas
+47 verbose cwd /Users/zhaoyadong/Workspace/pallas
+48 error Darwin 16.4.0
+49 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v7.5.0
+51 error npm  v4.1.2
+52 error code E403
+53 error "You cannot publish over the previously published version 0.0.2." : pallas
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]

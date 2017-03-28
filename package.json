@@ -1,6 +1,6 @@
 {
   "name": "pallas",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "pallas project",
   "author": "zhaoyadong <atding@163.com>",
   "main": "dist/static/js/pallas.js",

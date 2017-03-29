@@ -1,49 +1,56 @@
-var path = require('path')
-var utils = require('./utils')
-var webpack = require('webpack')
-var config = require('../config')
-var merge = require('webpack-merge')
-var baseWebpackConfig = require('./webpack.base.conf')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var env = config.build.env
+const path = require('path')
+const config = require('./config')
+const utils = require('./utils')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const OfflinePlugin = require('offline-plugin')
 
-var webpackConfig = merge(baseWebpackConfig, {
+const env = config.build.env
+
+const webpackConfig = merge(baseWebpackConfig, {
   module: {
-    rules: utils.styleLoaders({
+    loaders: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
       extract: true
     })
   },
-  //devtool: config.build.productionSourceMap ? '#source-map' : false,
+  devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].js'),
-    libraryTarget: 'umd',
-    library: 'MyLibrary',
-    umdNamedDefine: true
+    filename: utils.assetsPath('js/[name].[chunkhash:5].js'),
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash:5].js')
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
     }),
-/*    new webpack.optimize.UglifyJsPlugin({
+    new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       },
-      sourceMap: true
-    }),*/
+      output: {
+        comments: false
+      }
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].css')
+      filename: utils.assetsPath('css/[name].[contenthash:5].css')
     }),
+    // Compress extracted CSS. We are using this plugin so that possible
+    // duplicated CSS from different components can be deduped.
+    new OptimizeCSSPlugin(),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
-/*    new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       filename: config.build.index,
-      template: 'index.html',
+      template: './example/index.html',
       inject: true,
       minify: {
         removeComments: true,
@@ -54,9 +61,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
-    }),*/
+    }),
     // split vendor js into its own file
-/*    new webpack.optimize.CommonsChunkPlugin({
+    new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) {
         // any required modules inside node_modules are extracted to vendor
@@ -68,13 +75,15 @@ var webpackConfig = merge(baseWebpackConfig, {
           ) === 0
         )
       }
-    }),*/
+    }),
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
-/*    new webpack.optimize.CommonsChunkPlugin({
+    new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
-    })*/
+    }),
+
+    new OfflinePlugin()
   ]
 })
 

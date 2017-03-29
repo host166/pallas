@@ -2,17 +2,25 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
-import Rubik from 'i-rubik'
+import router from './router/index'
+import Pallas from '../src/index.js'
+import Markup from './components/Markup'
 
-Vue.use(Rubik)
+import highlight from 'highlight.js/lib/highlight.js'
+import highlightJS from 'highlight.js/lib/languages/javascript'
+import highlightXML from 'highlight.js/lib/languages/xml'
 
-/* eslint-disable no-new */
+highlight.registerLanguage('js', highlightJS)
+highlight.registerLanguage('html', highlightXML)
+
+require('offline-plugin/runtime').install()
+
+Vue.use(Pallas)
+Vue.component('Markup', Markup)
+
 new Vue({
-	el: '#app',
-	router,
-	template: '<App/>',
-	components: {
-		App
-	}
+  el: '#app',
+  name: 'Pallas',
+  router,
+  render: h => h(App)
 })

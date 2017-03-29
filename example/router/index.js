@@ -1,42 +1,32 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from 'components/Home'
-import Readme from 'components/Readme'
-import Directive from 'components/Directive'
-import Event from 'components/Event'
-import Transition from 'components/Transition'
-import Test from 'components/Test'
+import About from '../views/About.vue'
+import Slider from '../views/Slider.vue'
+import Switch from '../views/Switch.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
-export default new Router({
-
-  routes: [{
-      path: '/',
-      name: 'Home',
-      component: Home
-    }, {
-      path: '/readme',
-      name: 'Readme',
-      component: Readme
-    }, {
-      path: '/directive',
-      name: 'Directive',
-      component: Directive
-    }, {
-      path: '/event',
-      name: 'Event',
-      component: Event
-    }, {
-      path: '/transition',
-      name: 'Transition',
-      component: Transition
-    }, {
-      path: '/test',
-      name: 'Test',
-      component: Test
-    }
-
-
+const router = new Router({
+  routes:[
+    { name: 'home', path: '/', component: About},
+    { name: 'slider', path: '/slider', component: Slider},
+    { name: 'slider', path: '/switch', component: Switch},
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  let top = document.body.scrollTop
+  if(top > 0){
+    const timer = setInterval(()=>{
+      scrollTo(0, top)
+      top -= 100
+      if(top <= 0){
+        scrollTo(0, 0)
+        clearInterval(timer)
+      }
+    }, 20)
+  }
+  next()
+})
+
+export default router

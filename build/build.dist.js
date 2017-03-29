@@ -15,13 +15,12 @@ const spinner = ora('building for production...')
 //   .include(resolve('../src/style'))
 //   .set('compress', true)
 //   .render((err, css) => {
-//     fs.writeFileSync(resolve('../dist/pallas.min.css'), css)
+//     fs.writeFileSync(resolve('../dist/rubik.min.css'), css)
 //   })
 
 
 
 function build (builds) {
-    console.log(builds);
   builds.forEach(config => {
     spinner.start()
     webpack(config, function (err, stats) {
@@ -40,3 +39,5 @@ function build (builds) {
 
 
 build(builds)
+
+

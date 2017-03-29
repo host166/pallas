@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     app: './src/index.js'
   },
+  // devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/'
@@ -45,11 +46,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    //new ExtractTextPlugin('pallas.min.css')
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // }),
+    new ExtractTextPlugin('pallas.min.css')
   ]
 }

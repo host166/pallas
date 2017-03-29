@@ -28,15 +28,15 @@ function genConfig (opts) {
     })
   ])
 
-  // if (opts.env) {
-  //   config.plugins = config.plugins.concat([
-  //     new webpack.optimize.UglifyJsPlugin({
-  //       compress: {
-  //         warnings: false
-  //       }
-  //     })
-  //   ])
-  // }
+  if (opts.env) {
+    config.plugins = config.plugins.concat([
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      })
+    ])
+  }
 
   return config
 }

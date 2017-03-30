@@ -5,7 +5,7 @@
 <template>
     <div class="pls-switch" v-bind:class="xclass">
         <input type="checkbox" :id="id" :checked="myChecked" @change="toggle" :disabled="disabled">
-        <label :for="id" :class="xstyle"></label>
+        <label :for="id" :class="myStyle"></label>
     </div>
 </template>
 
@@ -46,7 +46,9 @@ export default {
         }
     },
     computed: {
-
+        myStyle: function () {
+            return "pls-" + this.xstyle;
+        }
     },
     methods: {
         toggle () {
@@ -95,19 +97,19 @@ export default {
         cursor: pointer;
     }
 
-    input[type="checkbox"]:checked+label.red {
+    input[type="checkbox"]:checked+label.pls-red {
         background: #ECA9A7;
     }
 
-    input[type="checkbox"]:checked+label.red:after {
+    input[type="checkbox"]:checked+label.pls-red:after {
         background: #D9534F;
     }
 
-    input[type="checkbox"]:checked+label.green {
+    input[type="checkbox"]:checked+label.pls-green {
         background: #AEDCAE;
     }
 
-    input[type="checkbox"]:checked+label.green:after {
+    input[type="checkbox"]:checked+label.pls-green:after {
         background: #5CB85C;
     }
 

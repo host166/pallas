@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="stylus">
   .markup {
     position relative
     &:after{
@@ -50,3 +50,5 @@ export default {
     }
   }
 </style>
+
+

@@ -1,3 +1,4 @@
+/* eslint-disable */
 process.env.NODE_ENV = 'production'
 const webpack = require('webpack')
 const ora = require('ora')
@@ -39,5 +40,3 @@ function build (builds) {
 
 
 build(builds)
-
-

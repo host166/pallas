@@ -1,149 +1,131 @@
 /**
- * @file Switch
+ * @file 开关切换 Switch
  */
 
 <template>
-  <span role="switch" :class="[switchWrapper]" :style="actionStyle" @click="toggle">
-    <span class="switch-on" v-show="checked">
-      <i :class="onIconClass" v-if="hasIcon"></i>
-      <span v-if="!hasIcon && hasText">{{onText}}</span>
-    </span>
-    <span class="switch-off" v-show="!checked">
-      <i :class="offIconClass" v-if="hasIcon"></i>
-      <span v-if="!hasIcon && hasText">{{offText}}</span>
-    </span>
-  </span>
+    <div class="pls-switch" v-bind:class="xclass">
+        <input type="checkbox" :id="id" :checked="myChecked" @change="toggle" :disabled="disabled">
+        <label :for="id" :class="xstyle"></label>
+    </div>
 </template>
 
 <script>
-  export default {
+/**
+Property : size : XS|S|M|L|XL
+*/
+export default {
     name: 'switch',
+    props: {
+        id: {
+            type: String,
+            required: true
+        },
+        checked: {
+            type: Boolean,
+            default: false
+        },
+        xstyle: {
+            type: String,
+            default: 'red'
+        },
+        size: {
+            type: String,
+            default: 'S'
+        },
+        disabled: {
+            type: Boolean,
+            default: false
+        },
+        xclass: {
+            type: String
+        }
+    },
     data() {
-      return {
-        onText: 'on',
-        offText: 'off',
-        size: 'small',
-        disabled: false,
-        onColor: '#e266ab',
-        offColor: '#efe565',
-        hasText: true,
-        checked: false,
-        hasIcon: false,
-        onIconClass: "",
-        offIconClass: "",
-        isDisabled: false
-      }
+        return {
+            myChecked: this.checked && !this.disabled
+        }
     },
     computed: {
-      switchWrapper() {
-        return [
-          'xg-switch',
-          {
-            ['switch-' + this.size]: !!this.size,
-            'switch-disabled': !!this.isDisabled,
-            'switchOn': this.checked,
-          }
-        ];
-      },
-      switchOn () {
-        return {
-          backgroundColor: this.onColor,
-          borderColor: this.onColor
-        };
-      },
-      switchOff () {
-        return {
-          backgroundColor: this.offColor,
-          borderColor: this.offColor
-        };
-      },
-      actionStyle () {
-        if (this.isDisabled) {
-          return this.switchDisabled;
-        } else if (this.checked) {
-          return this.switchOn;
-        } else {
-          return this.switchOff;
-        }
-      }
+
     },
     methods: {
-      toggle () {
-        if (!this.isDisabled) {
-          this.checked = !this.checked;
-          this.actionStyle = this.checked ? this.switchOn : this.switchOff;
+        toggle () {
+            if (!this.disabled) {
+                this.myChecked = !this.myChecked;
+            }
+            this.$emit('toggle', this.myChecked);
         }
-        this.$emit('change', this.checked);
-      }
     }
-  }
+}
 </script>
 
 <style scoped>
-  .xg-switch {
-    display: inline-block;
-    position: relative;
-    width: 44px;
-    height: 24px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 24px;
-    line-height: 22px;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border-color: #eee;
-    background-color: #eee;
-  }
-  .xg-switch:after {
-    content: '';
-    width: 20px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    left: 1px;
-    bottom: 1px;
-    top: 1px;
-    cursor: pointer;
-    transition: margin-left 0.2s ease-in-out;
-  }
-  .switch-large {
-    width: 48px;
-    height: 28px;
-    line-height: 26px;
-  }
-  .switch-large:after {
-    width: 24px;
-  }
-  .switch-small {
-    width: 40px;
-    height: 20px;
-    line-height: 18px;
-  }
-  .switch-small:after {
-    width: 16px;
-  }
-  .switch-disabled:after {
-    background-color: #ccc;
-    border-color: #aaa;
-    cursor: not-allowed;
-  }
-  .switch-on {
-    position: absolute;
-    font-size: 12px;
-    color: #fff;
-    right: 6px;
-  }
-  .switch-on:after {
-    margin-left: 20px;
-  }
-  .switch-off {
-    position: absolute;
-    font-size: 12px;
-    color: #fff;
-    right: 6px;
-  }
+    .pls-switch {
+        display: inline-block;
+        /*line-height: 60px;*/
+        text-align: center;
+        position: relative;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]+label {
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        position: relative;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        margin: 0px 20px;
+        box-sizing: border-box;
+    }
+
+    input[type="checkbox"]+label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked+label.red {
+        background: #ECA9A7;
+    }
+
+    input[type="checkbox"]:checked+label.red:after {
+        background: #D9534F;
+    }
+
+    input[type="checkbox"]:checked+label.green {
+        background: #AEDCAE;
+    }
+
+    input[type="checkbox"]:checked+label.green:after {
+        background: #5CB85C;
+    }
+
+    input[type="checkbox"]:checked+label:after {
+        left: calc(100% - 18px);
+    }
+
+    input[type="checkbox"]+label {
+        background: #ddd;
+        border-radius: 20px;
+    }
+
+    input[type="checkbox"]+label:after {
+        background: #fff;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: 2px;
+    }
 </style>

@@ -1,3 +1,4 @@
+/* eslint-disable */
 const base = require('./webpack.dist.conf')
 const webpack = require('webpack')
 const merge = require('webpack-merge')

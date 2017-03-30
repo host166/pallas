@@ -1,12 +1,18 @@
 <template>
   <div id="app" class="wrapper">
     <div class="logo">
-      <img src="./assets/logo-256.png" :class="loaded && loadClass">
+
     </div>
+    <p class="ui-name">
+      <i>P</i><i>A</i><i>L</i><i>L</i><i>A</i><i>S</i> <i>U</i><i>I</i>
+    </p>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Navigator from './components/Navigator.vue'
+import Markup from './components/Markup.vue'
 
 export default {
   name: 'app',
@@ -17,10 +23,11 @@ export default {
     }
   },
   components: {
-
+    Navigator,
+    Markup
   },
   mounted(){
-    this.$pallas.init()
+    //this.$pallas.init()
     setTimeout(()=>{
       this.loaded = true
     }, 150)
@@ -29,6 +36,8 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import './style/common.styl'
+
   .wrapper {
     background #eee
     padding 1px
@@ -68,7 +77,9 @@ export default {
         &:nth-child(5){
           color #94e827
         }
-
+        &:nth-child(6){
+          color #948827
+        }
       }
     }
     .wrapper-container {

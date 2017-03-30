@@ -1,3 +1,4 @@
+/* eslint-disable */
 const webpack = require('webpack')
 const nib = require('nib')
 const path = require('path')

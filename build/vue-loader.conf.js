@@ -1,3 +1,4 @@
+/* eslint-disable */
 const config = require('./config')
 const utils = require('./utils')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')

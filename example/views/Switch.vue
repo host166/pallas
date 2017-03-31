@@ -9,6 +9,8 @@
         <p-switch id="switch2" size="XS" @toggle="onToggle2" :checked=checked2 xstyle="green"></p-switch>
         <div id="switchVal">{{switchVal}}</div>
         <div id="switchVal2">{{switchVal2}}</div>
+        <input type="button" value="Open" @click="openClick" />
+        <input type="button" value="Close" @click="closeClick" />
     </div>
 
     <h2>API</h2>
@@ -37,6 +39,13 @@ export default {
         },
         onToggle2: function(data) {
             this.switchVal2 = data;
+            this.checked2 = data;
+        },
+        openClick: function () {
+            this.checked2 = true;
+        },
+        closeClick: function () {
+            this.checked2 = false;
         }
     }
 }

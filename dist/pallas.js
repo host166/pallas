@@ -253,12 +253,19 @@ exports.default = {
             return "pls-" + this.xstyle;
         }
     },
+    watch: {
+        checked: function checked(val) {
+            this.myChecked = val;
+        },
+        myChecked: function myChecked(val) {
+            this.$emit("toggle", val);
+        }
+    },
     methods: {
         toggle: function toggle() {
             if (!this.disabled) {
                 this.myChecked = !this.myChecked;
             }
-            this.$emit('toggle', this.myChecked);
         }
     }
 };

@@ -3,7 +3,7 @@
  */
 
 <template>
-    <div class="pls-switch" v-bind:class="xclass">
+    <div class="ui-switch" v-bind:class="xclass">
         <input type="checkbox" :id="id" :checked="myChecked" @change="toggle" :disabled="disabled">
         <label :for="id" :class="myStyle"></label>
     </div>
@@ -47,7 +47,7 @@ export default {
     },
     computed: {
         myStyle: function () {
-            return "pls-" + this.xstyle;
+            return "switch-" + this.xstyle;
         }
     },
     watch: {
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style scoped>
-    .pls-switch {
+    .ui-switch {
         display: inline-block;
         /*line-height: 60px;*/
         text-align: center;
@@ -104,19 +104,19 @@ export default {
         cursor: pointer;
     }
 
-    input[type="checkbox"]:checked+label.pls-red {
+    input[type="checkbox"]:checked+label.switch-red {
         background: #ECA9A7;
     }
 
-    input[type="checkbox"]:checked+label.pls-red:after {
+    input[type="checkbox"]:checked+label.switch-red:after {
         background: #D9534F;
     }
 
-    input[type="checkbox"]:checked+label.pls-green {
+    input[type="checkbox"]:checked+label.switch-green {
         background: #AEDCAE;
     }
 
-    input[type="checkbox"]:checked+label.pls-green:after {
+    input[type="checkbox"]:checked+label.switch-green:after {
         background: #5CB85C;
     }
 

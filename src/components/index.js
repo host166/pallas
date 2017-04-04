@@ -3,6 +3,8 @@
  * @author zhaoyadong<zhaoyadong@baidu.com>
  */
 import Switch from './Switch';
+import Range from './Range';
+
 
 function init(...components) {
     const com = {};
@@ -16,5 +18,6 @@ function init(...components) {
 }
 
 export default init(
-    Switch
+    Switch,
+    Range
 );

@@ -7,6 +7,7 @@ import Router from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Switch from '../views/Switch.vue';
+import Range from '../views/Range.vue';
 
 Vue.use(Router);
 
@@ -14,7 +15,8 @@ const router = new Router({
     routes: [
         {name: 'home', path: '/', component: Home},
         {name: 'about', path: '/about', component: About},
-        {name: 'switch', path: '/switch', component: Switch}
+        {name: 'switch', path: '/switch', component: Switch},
+        {name: 'range', path: '/range', component: Range}
     ]
 });
 

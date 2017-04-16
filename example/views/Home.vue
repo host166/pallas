@@ -5,6 +5,7 @@
     <ul>
         <li><router-link to="/switch">切换开关</router-link></li>
         <li><router-link to="/range">范围选择</router-link></li>
+        <li><router-link to="/tag">标签组件</router-link></li>
         <li><router-link to="/about">关于Pallas</router-link></li>
     </ul>
 

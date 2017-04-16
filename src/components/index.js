@@ -1,10 +1,10 @@
 /**
  * @file 组件输出
- * @author zhaoyadong<zhaoyadong@baidu.com>
+ * @author zhaoyadong
  */
 import Switch from './Switch';
 import Range from './Range';
-
+import Tag from './Tag';
 
 function init(...components) {
     const com = {};
@@ -19,5 +19,6 @@ function init(...components) {
 
 export default init(
     Switch,
-    Range
+    Range,
+    Tag
 );

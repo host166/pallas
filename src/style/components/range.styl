@@ -1,0 +1,77 @@
+.range {
+    position relative
+    height 1.34rem
+}
+
+.range-value span {
+    display inline-block
+}
+
+.range-wrap {
+    position absolute
+    right .61rem
+    left .61rem
+}
+
+.range-left,
+.range-right {
+    position absolute
+    width 1.22rem
+    height 1.34rem
+    background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAABDCAMAAAA20dz4AAAAOVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD19fXb29szMzP9/f339/eEhIT+/v74+Pj4+Pj////q6upuLKHEAAAAEXRSTlMABQ0fFRMJGdCAH/bWNPrW1xwvsCsAAAC3SURBVEjH7dbRDsIgDIVht7UUxjbE939YayqbikBqYrIL/usvzbIbzkXfUChnxoxfMkbwAZkhInyEiIyF7hCBaMoiAhR6wNlZH7O8dfMLfcB1iYWWlWmSfJFhqcBXh3QSXKzkgI+KRLI1aQmfckTaanIjHJOcYrVpl9CS0GWXWnl767zf2f/S+WX/S13+JpWvYfuF9cRS8WprloCsi1CGV1kX7cUSZLEoVpBuWbXXmnIBtlflP7sDMfZ1OW1Hu3kAAAAASUVORK5CYII=')
+    background-size contain
+    background-repeat no-repeat
+    background-position center center
+    z-index 1
+}
+
+.range-left {
+    left 0
+}
+
+.range-right {
+    right 0
+}
+
+.range-progress {
+    height .08rem
+    width 100%
+    display block
+    background-color #F24
+    position absolute
+    top .63rem
+}
+
+.range-progress-left,
+.range-progress-right {
+    position absolute
+    background-color #E1E1E1
+    height .08rem
+    display block
+}
+
+.range-progress-left {
+    left 0
+}
+
+.range-progress-right {
+    right 0
+}
+
+.range-desc {
+    display -webkit-box
+    position absolute
+    bottom 0
+    width 100%
+    display none
+}
+
+.range-desc li {
+    -webkit-box-flex 1
+    text-align center
+    width 1px
+}
+
+.range-desc li span {
+    margin-left -100%
+}

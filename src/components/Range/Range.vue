@@ -1,11 +1,11 @@
 <template>
-	<div class="ui-range" style="width: 100%;">
-	    <span class="ui-range-handle ui-range-left" :style="leftStyle" @touchstart="touchstartLeftHandle" @touchmove="touchmoveLeftHandle"></span>
-	    <span class="ui-range-handle ui-range-right" :style="rightStyle" @touchstart="touchstartRightHandle" @touchmove="touchmoveRightHandle"></span>
-	    <div class="ui-range-wrap">
-	        <i class="ui-range-progress">
-	            <i class="ui-range-progress-left ui-range-progress-item" :style="leftAxsi"></i>
-	            <i class="ui-range-progress-right ui-range-progress-item" :style="rightAxsi"></i>
+	<div class="range" style="width: 100%;">
+	    <span class="range-handle range-left" :style="leftStyle" @touchstart="touchstartLeftHandle" @touchmove="touchmoveLeftHandle"></span>
+	    <span class="range-handle range-right" :style="rightStyle" @touchstart="touchstartRightHandle" @touchmove="touchmoveRightHandle"></span>
+	    <div class="range-wrap">
+	        <i class="range-progress">
+	            <i class="range-progress-left range-progress-item" :style="leftAxsi"></i>
+	            <i class="range-progress-right range-progress-item" :style="rightAxsi"></i>
 	        </i>
 	    </div>
 	</div>
@@ -157,83 +157,3 @@ export default {
     },
 }
 </script>
-
-<style scoped lang="css">
-.ui-range {
-    position: relative;
-    height: 1.34rem;
-}
-
-.ui-range-value span {
-    display: inline-block;
-}
-
-.ui-range-wrap {
-    position: absolute;
-    right: .61rem;
-    left: .61rem;
-}
-
-.ui-range-left,
-.ui-range-right {
-    position: absolute;
-    width: 1.22rem;
-    height: 1.34rem;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAABDCAMAAAA20dz4AAAAOVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD19fXb29szMzP9/f339/eEhIT+/v74+Pj4+Pj////q6upuLKHEAAAAEXRSTlMABQ0fFRMJGdCAH/bWNPrW1xwvsCsAAAC3SURBVEjH7dbRDsIgDIVht7UUxjbE939YayqbikBqYrIL/usvzbIbzkXfUChnxoxfMkbwAZkhInyEiIyF7hCBaMoiAhR6wNlZH7O8dfMLfcB1iYWWlWmSfJFhqcBXh3QSXKzkgI+KRLI1aQmfckTaanIjHJOcYrVpl9CS0GWXWnl767zf2f/S+WX/S13+JpWvYfuF9cRS8WprloCsi1CGV1kX7cUSZLEoVpBuWbXXmnIBtlflP7sDMfZ1OW1Hu3kAAAAASUVORK5CYII=);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 1;
-}
-
-.ui-range-left {
-    left: 0;
-}
-
-.ui-range-right {
-    right: 0;
-}
-
-.ui-range-progress {
-    height: .08rem;
-    width: 100%;
-    display: block;
-    background-color: #F24;
-    position: absolute;
-    top: .63rem;
-}
-
-.ui-range-progress-left,
-.ui-range-progress-right {
-    position: absolute;
-    background-color: #E1E1E1;
-    height: .08rem;
-    display: block;
-}
-
-.ui-range-progress-left {
-    left: 0;
-}
-
-.ui-range-progress-right {
-    right: 0;
-}
-
-.ui-range-desc {
-    display: -webkit-box;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: none;
-}
-
-.ui-range-desc li {
-    -webkit-box-flex: 1;
-    text-align: center;
-    width: 1px;
-}
-
-.ui-range-desc li span {
-    margin-left: -100%;
-}
-</style>

@@ -1,0 +1,71 @@
+<template>
+<i class="pallas-icons icon" :class="clazz"><slot></slot></i>
+</template>
+
+<script>
+export default {
+    name: 'icon',
+    data(){
+        return {
+            active: false
+        }
+    },
+    props: {
+        small: Boolean,
+        medium: Boolean,
+        large: Boolean,
+        xLarge: Boolean,
+        left: Boolean,
+        right: Boolean
+    },
+    computed: {
+        clazz(){
+            return {
+                'icon-small': this.small,
+                'icon-medium':  this.medium,
+                'icon-large':  this.large,
+                'icon-x-large':  this.xLarge,
+                'icon-left':  this.left,
+                'icon-right': this.right
+            }
+        }
+    }
+}
+</script>
+
+<style lang="css" scoped>
+.icon {
+    overflow: hidden;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+.icon-small {
+    padding: .1rem;
+    font-size: 1rem;
+    min-width: 2rem; // for safari
+    width: 2rem; // for safari
+    height: 2rem; // for safari
+}
+.icon-medium {
+    padding: .3rem;
+    font-size: 2rem;
+    min-width: 4rem; // for safari
+    width: 4rem; // for safari
+    height: 4rem; // for safari
+}
+.icon-large {
+    padding: .6rem;
+    font-size: 2.5rem;
+    min-width: 4.5rem; // for safari
+    width: 4.5rem; // for safari
+    height: 4.5rem; // for safari
+}
+.icon-x-large {
+    padding: 1rem;
+    font-size: 3rem;
+    min-width: 5rem; // for safari
+    width: 5rem; // for safari
+    height: 5rem; // for safari
+}
+</style>

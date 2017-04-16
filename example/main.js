@@ -1,6 +1,6 @@
 /**
  * @file 测试main文件
- * @author zhaoyadong<zhaoyadong@baidu.com>
+ * @author zhaoyadong
  */
 import Vue from 'vue';
 import App from './App';

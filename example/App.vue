@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="wrapper">
     <div class="logo">
-
+        <img src="./assets/pallas.svg"/>
     </div>
     <p class="ui-name">
       <i>P</i><i>A</i><i>L</i><i>L</i><i>A</i><i>S</i> <i>U</i><i>I</i>
@@ -43,14 +43,12 @@ export default {
     padding 1px
     .logo {
       margin 10px auto
-      height 80px
+      height 128px
       text-align center
       img {
-        width 80px
+        width 128px
         transition all .7s cubic-bezier(0, 0.51, 0.69, 1.15)
-        transform rotate(0) scale(10)
         transform-origin center center
-        opacity 0
         &.load {
           transform rotate(1080deg) scale(1)
           opacity 1
@@ -66,7 +64,7 @@ export default {
           color #f06
         }
         &:nth-child(2){
-          color #0089ce
+          color #008ca0
         }
         &:nth-child(3){
           color #f1d800
@@ -79,6 +77,12 @@ export default {
         }
         &:nth-child(6){
           color #948827
+        }
+        &:nth-child(7){
+          color #008ca0
+        }
+        &:nth-child(8){
+          color #008ca0
         }
       }
     }
@@ -122,7 +126,7 @@ export default {
         margin 10px 0
         height 40px
         img {
-          width 40px
+          width 64px
         }
       }
       .ui-name {

@@ -1,6 +1,6 @@
 /**
  * @file 编译配置文件
- * @author zhaoyadong<zhaoyadong@baidu.com>
+ * @author zhaoyadong
  */
 var path = require('path');
 /* eslint-disable */

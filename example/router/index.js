@@ -1,6 +1,6 @@
 /**
  * @file 测试router文件
- * @author zhaoyadong<zhaoyadong@baidu.com>
+ * @author zhaoyadong
  */
 import Vue from 'vue';
 import Router from 'vue-router';
@@ -8,6 +8,7 @@ import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Switch from '../views/Switch.vue';
 import Range from '../views/Range.vue';
+import Tag from '../views/Tag.vue';
 
 Vue.use(Router);
 
@@ -16,7 +17,8 @@ const router = new Router({
         {name: 'home', path: '/', component: Home},
         {name: 'about', path: '/about', component: About},
         {name: 'switch', path: '/switch', component: Switch},
-        {name: 'range', path: '/range', component: Range}
+        {name: 'range', path: '/range', component: Range},
+        {name: 'tag', path: '/tag', component: Tag}
     ]
 });
 

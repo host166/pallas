@@ -1,7 +1,9 @@
 /**
  * @file Pallas对象输出
- * @author zhaoyadong<zhaoyadong@baidu.com>
+ * @author zhaoyadong
  */
+
+require('./style/main.styl');
 import Components from './components';
 import Directives from './directives';
 

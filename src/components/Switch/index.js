@@ -1,6 +1,6 @@
 /**
  * @file 切换开关组件
- * @author zhaoyadong<zhaoyadong@baidu.com>
+ * @author zhaoyadong
  */
 import Switch from './Switch.vue';
 

@@ -3,7 +3,7 @@
  */
 
 <template>
-    <div class="ui-switch" v-bind:class="xclass">
+    <div class="ui-switch">
         <input type="checkbox" :id="id" :checked="myChecked" @change="toggle" :disabled="disabled">
         <label :for="id" :class="myStyle"></label>
     </div>
@@ -26,7 +26,7 @@ export default {
         },
         xstyle: {
             type: String,
-            default: 'red'
+            default: 'green'
         },
         size: {
             type: String,
@@ -35,9 +35,6 @@ export default {
         disabled: {
             type: Boolean,
             default: false
-        },
-        xclass: {
-            type: String
         }
     },
     data() {
@@ -47,6 +44,7 @@ export default {
     },
     computed: {
         myStyle: function () {
+            console.log(this.xstyle);
             return "switch-" + this.xstyle;
         }
     },
@@ -67,74 +65,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-    .ui-switch {
-        display: inline-block;
-        /*line-height: 60px;*/
-        text-align: center;
-        position: relative;
-    }
-
-    input[type="checkbox"] {
-        display: none;
-    }
-
-    input[type="checkbox"]+label {
-        display: inline-block;
-        width: 40px;
-        height: 20px;
-        position: relative;
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-        margin: 0px 20px;
-        box-sizing: border-box;
-    }
-
-    input[type="checkbox"]+label:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 20px;
-        height: 20px;
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-
-    input[type="checkbox"]:checked+label.switch-red {
-        background: #ECA9A7;
-    }
-
-    input[type="checkbox"]:checked+label.switch-red:after {
-        background: #D9534F;
-    }
-
-    input[type="checkbox"]:checked+label.switch-green {
-        background: #AEDCAE;
-    }
-
-    input[type="checkbox"]:checked+label.switch-green:after {
-        background: #5CB85C;
-    }
-
-    input[type="checkbox"]:checked+label:after {
-        left: calc(100% - 18px);
-    }
-
-    input[type="checkbox"]+label {
-        background: #ddd;
-        border-radius: 20px;
-    }
-
-    input[type="checkbox"]+label:after {
-        background: #fff;
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        top: 2px;
-        left: 2px;
-    }
-</style>

@@ -1,6 +1,6 @@
 /**
  * @file 范围选择组件
- * @author zhaoyadong<zhaoyadong@baidu.com>
+ * @author zhaoyadong
  */
 import Range from './Range.vue';
 

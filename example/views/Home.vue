@@ -3,9 +3,10 @@
     <h1>{{ msg }}</h1>
     <h2>基本链接</h2>
     <ul>
-        <li><router-link to="/switch">切换开关</router-link></li>
-        <li><router-link to="/range">范围选择</router-link></li>
+        <li><router-link to="/multi">多选组件</router-link></li>
         <li><router-link to="/tag">标签组件</router-link></li>
+        <li><router-link to="/range">范围选择</router-link></li>
+        <li><router-link to="/switch">切换开关</router-link></li>
         <li><router-link to="/about">关于Pallas</router-link></li>
     </ul>
 
@@ -17,7 +18,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: '欢迎来到Vue2的世界!'
+      msg: '关于Pallas UI的介绍'
     }
   }
 }

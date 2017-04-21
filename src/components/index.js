@@ -5,6 +5,7 @@
 import Switch from './Switch';
 import Range from './Range';
 import Tag from './Tag';
+import Multi from './Multi';
 
 function init(...components) {
     const com = {};
@@ -20,5 +21,6 @@ function init(...components) {
 export default init(
     Switch,
     Range,
-    Tag
+    Tag,
+    Multi
 );

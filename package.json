@@ -1,6 +1,6 @@
 {
   "name": "pallas",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Pallas UI 是一个基于 Vue.js 2.0+ 的开源 UI 组件库",
   "author": "zhaoyadong",
   "main": "dist/pallas.js",

@@ -6,6 +6,7 @@
 require('./style/main.styl');
 import Components from './components';
 import Directives from './directives';
+import Toast from './util/toast';
 
 /* eslint-disable */
 function Pallas(Vue) {
@@ -18,7 +19,7 @@ function Pallas(Vue) {
     });
 
     Vue.prototype.$pallas = {
-
+        toast: Toast
     };
 }
 

@@ -10,6 +10,7 @@ import Switch from '../views/Switch.vue';
 import Range from '../views/Range.vue';
 import Tag from '../views/Tag.vue';
 import Multi from '../views/Multi.vue';
+import Toast from '../views/Toast.vue';
 
 Vue.use(Router);
 
@@ -20,7 +21,8 @@ const router = new Router({
         {name: 'switch', path: '/switch', component: Switch},
         {name: 'range', path: '/range', component: Range},
         {name: 'tag', path: '/tag', component: Tag},
-        {name: 'multi', path: '/multi', component: Multi}
+        {name: 'multi', path: '/multi', component: Multi},
+        {name: 'toast', path: '/toast', component: Toast}
     ]
 });
 

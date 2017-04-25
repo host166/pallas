@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>基本链接</h2>
     <ul>
+        <li><router-link to="/toast">Toast组件</router-link></li>
         <li><router-link to="/multi">多选组件</router-link></li>
         <li><router-link to="/tag">标签组件</router-link></li>
         <li><router-link to="/range">范围选择</router-link></li>

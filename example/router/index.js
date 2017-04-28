@@ -11,6 +11,7 @@ import Range from '../views/Range.vue';
 import Tag from '../views/Tag.vue';
 import Multi from '../views/Multi.vue';
 import Toast from '../views/Toast.vue';
+import Icon from '../views/Icon.vue';
 
 Vue.use(Router);
 
@@ -22,7 +23,8 @@ const router = new Router({
         {name: 'range', path: '/range', component: Range},
         {name: 'tag', path: '/tag', component: Tag},
         {name: 'multi', path: '/multi', component: Multi},
-        {name: 'toast', path: '/toast', component: Toast}
+        {name: 'toast', path: '/toast', component: Toast},
+        {name: 'icon', path: '/icon', component: Icon},
     ]
 });
 

@@ -2,11 +2,11 @@
  * @file Pallas对象输出
  * @author zhaoyadong
  */
-
-require('./style/main.styl');
 import Components from './components';
 import Directives from './directives';
 import Toast from './util/toast';
+
+require('./style/main.styl');
 
 /* eslint-disable */
 function Pallas(Vue) {
